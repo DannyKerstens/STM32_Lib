@@ -6,8 +6,8 @@
 #include <time.h>
 
 /* Defines */
-extern UART_HandleTypeDef huart1;
-#define LOGGER_UART &huart1
+extern UART_HandleTypeDef huart5;
+#define LOGGER_UART &huart5
 
 #define LOG_BUFFER_SIZE 255
 /* Variables */

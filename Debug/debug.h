@@ -3,7 +3,9 @@
 
 #include "stdint.h"
 #include "time.h"
+
 #include "stm32F3xx_hal.h"
+
 
 void LOG_Print(const char* text, ...);
 void LOG_Info(const char* text, ...);
