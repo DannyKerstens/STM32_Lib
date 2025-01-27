@@ -22,7 +22,7 @@ const eepromCfg cfg_24FC16T = {
 };
 
 
-class _24FCxxT: eeprom
+class _24FCxxT: public eeprom
 {
 public:
   _24FCxxT(I2C_HandleTypeDef *hi2c, eepromCfg config);
@@ -30,12 +30,12 @@ public:
   /* Write Functions */
   void WriteByte(const uint32_t address, uint8_t data);
   void WriteSequential(const uint32_t address, uint8_t *data, size_t size);
-  void WritePage(const uint32_t page, const uint32_t address, uint8_t *data, size_t size);
+  void WritePage(const uint16_t page, const uint16_t offset, uint8_t *data, size_t size);
 
   /* Read Functions */
   uint8_t ReadByte(const uint32_t address);
   void ReadSequential(const uint32_t address, uint8_t *data, size_t size);
-  void ReadPage(const uint32_t page, const uint32_t address, uint8_t *data, size_t size);
+  void ReadPage(const uint16_t page, const uint16_t offset, uint8_t *data, size_t size);
 
 private:
   I2C_HandleTypeDef *_handle;

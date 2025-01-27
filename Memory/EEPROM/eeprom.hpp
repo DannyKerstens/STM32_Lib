@@ -23,7 +23,7 @@ public:
   /* Write Functions */
   virtual void WriteByte(const uint32_t address, uint8_t data) = 0;
   virtual void WriteSequential(const uint32_t address, uint8_t *data, size_t size) = 0;
-  virtual void WritePage(const uint32_t page, const uint32_t address, uint8_t *data, size_t size) = 0;
+  virtual void WritePage(const uint16_t page, const uint16_t offset, uint8_t *data, size_t size) = 0;
 
   void Write16Bits(const uint32_t address, uint16_t data);
   void Write32Bits(const uint32_t address, uint32_t data);
@@ -31,7 +31,7 @@ public:
   /* Read Functions */
   virtual uint8_t ReadByte(const uint32_t address) = 0;
   virtual void ReadSequential(const uint32_t address, uint8_t *data, size_t size) = 0;
-  virtual void ReadPage(const uint32_t page, const uint32_t address, uint8_t *data, size_t size) = 0;
+  virtual void ReadPage(const uint16_t page, const uint16_t address, uint8_t *data, size_t size) = 0;
 
   uint16_t Read16Bits(const uint32_t address);
   uint32_t Read32Bits(const uint32_t address);
