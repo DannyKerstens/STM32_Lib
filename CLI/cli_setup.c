@@ -1,15 +1,13 @@
-// STD LIBS
+
+#include "cli_setup.h"
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
 
 // STM files
-//#include "usart.h"
-#include "stm32F1xx_hal.h"
-#include "stm32F1xx_it.h"
-
-// Own CLI headers
-#include "cli_setup.h"
+#include "stm32F3xx_hal.h"
+#include "stm32F3xx_it.h"
 
 
 // UART buffers

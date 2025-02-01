@@ -1,8 +1,10 @@
+#include "cli_commands.h"
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "cli_commands.h"
-#include "debug.h"
+
+#include "../Debug/debug.h"
 
 
 void setGPIO(char *args)

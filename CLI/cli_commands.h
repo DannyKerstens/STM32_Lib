@@ -2,7 +2,7 @@
 #define INC_CLI_BINDING_H_
 
 /* CLI Command Structure */
-__packed typedef struct {
+typedef struct {
     const char *pCmd;
     const char *pHelp;
     void (*pFun)(char *);

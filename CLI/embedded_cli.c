@@ -1,6 +1,6 @@
 #include "embedded_cli.h"
 #include "cli_setup.h"
-#include "debug.h"
+#include "../Debug/debug.h"
 
 static char UART_CLI_rxBuffer[128];
 bool cliReady = false;

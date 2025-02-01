@@ -53,12 +53,15 @@ void _24FCxxT::WritePage(const uint16_t page, const uint16_t offset, uint8_t *da
 
 uint8_t _24FCxxT::ReadByte(const uint32_t address)
 {
-  uint8_t regValue;
+  /* Add block address to read command */
+  uint8_t memoryValue;
   uint8_t command = READ_COMMAND + ((address & 0x0F00) >> 7);
 
-  HAL_I2C_Mem_Read(_handle, command, (address & 0xFF), 1, &regValue, 1, I2C_TIMEOUT);
+  /* Read page from memory */
+  HAL_I2C_Mem_Read(_handle, command, (address & 0xFF), 1, &memoryValue, 1, I2C_TIMEOUT);
 
-  return regValue;
+  /* Return memory value */
+  return memoryValue;
 }
 
 void _24FCxxT::ReadSequential(const uint32_t address, uint8_t *data, size_t size)

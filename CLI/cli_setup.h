@@ -8,9 +8,10 @@
 #ifndef INC_CLI_SETUP_H_
 #define INC_CLI_SETUP_H_
 
-#include "embedded_cli.h"
+#include "stm32F3xx_hal.h"
+
 #include "cli_commands.h"
-#include "stm32F1xx_hal.h"
+#include "embedded_cli.h"
 
 extern UART_HandleTypeDef huart1;
 
